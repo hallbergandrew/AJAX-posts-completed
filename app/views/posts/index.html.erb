@@ -1,0 +1,23 @@
+<% content_for(:title, "Welcome | Association of Olgas") %>
+</h1> Posts List <h1>
+
+<%= link_to "New Post", new_post_path, id: "new_link", remote: true %>
+
+<h2>Posts</h2>
+<ul>
+ <% @posts.each do |post| %>
+ <li><%= post.title %><br>
+ <%= post.content %></li>
+ <% end %>
+</ul>
+
+
+<h2>Incomplete Posts</h2>
+<div class="posts" id="incomplete_posts">
+  <%= render @incomplete_posts %>
+</div>
+
+<h2>Complete Posts</h2>
+<div class="posts" id="complete_posts">
+<%= render @complete_posts %>
+ </div>
