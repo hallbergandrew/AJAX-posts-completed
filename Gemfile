@@ -47,6 +47,7 @@ group :development do
 end
 group :test do
   gem 'shoulda-matchers'
+  gem 'poltergeist'
 end
 
 # Use unicorn as the app server
